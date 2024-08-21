@@ -1,0 +1,21 @@
+version: '3'
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./media:/app/media
+      - ./db:/app/db
+    environment:
+      - BOT_TOKEN=secret
+      - GRAPHHOPPER_TOKEN=secret
+      - FORSQUARE_TOKEN=secret
+      - YANDEX_TILES_TOKEN=secret
+      - YANDEX_ORG_TOKEN=secret
+      - AMADEUS_TOKEN=secret
+      - AMADEUS_SECRET=secret
+      - AAI_TOKEN=secret
+
+
+
